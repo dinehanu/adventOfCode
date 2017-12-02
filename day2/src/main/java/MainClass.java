@@ -8,6 +8,7 @@ public class MainClass {
 
         Day2 checksumGenerator = new Day2();
         System.out.println("CheckSum: " + checksumGenerator.getChecksum());
+        System.out.println("Even checkSum: " + checksumGenerator.getEvenChecksum());
 
     }
 

@@ -12,8 +12,17 @@ class Day2Test {
         testLines.add(new String[]{"7","5","3"});
         testLines.add(new String[]{"2","4","6","8"});
 
+        assertEquals(18, checksumGen.calcChecksum(testLines), "calcChecksum");
+    }
 
+    @org.junit.jupiter.api.Test
+    void getEvenChecksum() {
+        Day2 checksumGen = new Day2();
+        ArrayList<String[]> testLines2 = new ArrayList<String[]>();
+        testLines2.add(new String[]{"5","9","2","8"});
+        testLines2.add(new String[]{"9","4", "7", "3"});
+        testLines2.add(new String[]{"3","8","6","5"});
 
-        assertEquals(checksumGen.calcChecksum(testLines), 18, "calcChecksum");
+        assertEquals(9, checksumGen.calcEvenChecksum(testLines2),  "calcEvenChecksum");
     }
 }

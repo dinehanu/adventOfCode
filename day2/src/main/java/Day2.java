@@ -9,7 +9,11 @@ import java.nio.file.Files;
 public class Day2 {
 
     public int getChecksum(){
-        return calcChecksum(getSpreadsheet());
+        return calcChecksum(getSpreadsheet("spreadsheet.txt"));
+    }
+
+    public int getEvenChecksum(){
+        return calcEvenChecksum(getSpreadsheet("spreadsheet.txt"));
     }
 
     protected int calcChecksum(ArrayList<String[]> lines){
@@ -26,13 +30,31 @@ public class Day2 {
         return checksum;
     }
 
+    protected int calcEvenChecksum(ArrayList<String[]> lines){
 
-    private ArrayList<String[]> getSpreadsheet() {
+        int checksum = 0;
+        for (String[] line : lines ) {
+            for (int i = 0; i < line.length; i++) {
+                for (int j = 0; j < line.length; j++) {
+                    if(j != i){
+                        if((Integer.parseInt(line[i]) % Integer.parseInt(line[j])) == 0){
+                            checksum += (Integer.parseInt(line[i]) / Integer.parseInt(line[j]));
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        return checksum;
+    }
+
+
+    private ArrayList<String[]> getSpreadsheet(String fileName) {
         ArrayList<String[]> lines = new ArrayList<String[]>();
 
         //Get file from resources folder
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("spreadsheet.txt").getFile());
+        File file = new File(classLoader.getResource(fileName).getFile());
 
         try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNextLine()) {
