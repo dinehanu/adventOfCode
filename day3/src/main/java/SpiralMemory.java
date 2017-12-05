@@ -1,33 +1,25 @@
 public class SpiralMemory {
 
-    public int calculateNumberOfSteps(int position){
+    public int calculateTotalNumberOfSteps(int position){
+        int[] coordinates = calculateNumberOfSteps(position);
+        return (coordinates[0] + coordinates[1]);
+    }
 
+    private int[] calculateNumberOfSteps(int position){
+
+        int[] ret = new int[]{0,0};
         int circleNumber = getCircleNumber(position);
         int lastIndex = getLastIndexOfCircle(position);
 
         if(circleNumber == 0){
-            return 0;
+            return ret;
         }
-        int numberOfSteps = (circleNumber == 1 ? 2 : (circleNumber^2));
 
-
-            if(lastIndex == position){
-                return numberOfSteps;
-            }
-            else{
-                int stepCounter = 1;
-                int xCounter = 4;
-                int yCounter = 0;
-                while(lastIndex != position){
-
-                }
-
-            }
-
-        return 0;
+        ret = getPositions(circleNumber, lastIndex, position);
+        return ret;
     }
 
-    public int getCircleNumber(int index){
+    private int getCircleNumber(int index){
         int circleNumber = 0;
         int firstIndexInCircle = 1;
         int increase = 0;
@@ -39,87 +31,58 @@ public class SpiralMemory {
         return circleNumber;
     }
 
-    public int getLastIndexOfCircle(int index) {
+    private int getLastIndexOfCircle(int index) {
         int lastIndexInCircle = 1;
         int increase = 0;
         while (lastIndexInCircle < index) {
             increase += 8;
-            return lastIndexInCircle;
+            lastIndexInCircle += increase;
         }
-        return 0;
+        return lastIndexInCircle;
     }
 
-    public int[] getPositions(int circleNumber, int largestIndex, int index){
+    private int[] getPositions(int circleNumber, int largestIndex, int index){
 
-        int[] ret;
+        //MaxNumber of steps
+        int[] ret = {circleNumber, circleNumber};
 
-        ret = checkXAndY(circleNumber, largestIndex, index);
+        ret[0] = calculateValue(circleNumber, largestIndex, index);
         if(ret[0] != circleNumber || ret[1] != circleNumber ){
             return ret;
         }
 
-        ret = checkXAndY(circleNumber, (largestIndex - circleNumber*2), index);
+        ret[1] = calculateValue(circleNumber, (largestIndex - circleNumber*2), index);
         if(ret[0] != circleNumber || ret[1] != circleNumber ){
             return ret;
         }
 
-        ret = checkXAndY(circleNumber, (largestIndex - circleNumber*4), index);
+        ret[0] = calculateValue(circleNumber, (largestIndex - circleNumber*4), index);
         if(ret[0] != circleNumber || ret[1] != circleNumber ){
             return ret;
         }
 
-        ret = checkXAndY(circleNumber, (largestIndex - circleNumber*6), index);
+        ret[1] = calculateValue(circleNumber, (largestIndex - circleNumber*6), index);
         if(ret[0] != circleNumber || ret[1] != circleNumber ){
             return ret;
         }
 
-
-        /**
-        int numberOfSteps = circleNumber * 2;
-
-        int counter = 0;
-        int x = circleNumber;
-        int y = circleNumber;
-
-        if(index == largestIndex){
-            return new int[]{x,y};
-        }
-
-            //No change in y
-            while(counter <= numberOfSteps){
-                x = counter <= circleNumber ? x-- : x++;
-                largestIndex--;
-                if(largestIndex == index){
-                    return new int[]{x,y};
-                }
-            }
-        //No change in x
-        while(counter <= numberOfSteps){
-            y = counter <= circleNumber ? y-- : y++;
-            largestIndex--;
-            if(largestIndex == index){
-                return new int[]{x,y};
-            }
-        }
-
-         */
         return ret;
     }
 
-    public int[] checkXAndY(int circleNumber, int largestIndex, int index){
+    private int calculateValue(int circleNumber, int largestIndex, int index){
 
         int counter = 0;
-        int x = circleNumber;
-        int y = circleNumber;
-        int numberOfSteps = circleNumber * 2;
+        int numberOfSteps = circleNumber;
+        int numberOfStepsToGo = circleNumber * 2;
 
-        while(counter <= numberOfSteps){
-            y = counter <= circleNumber ? y-- : y++;
+        while(counter < numberOfStepsToGo){
+            numberOfSteps = counter < circleNumber ? --numberOfSteps : ++numberOfSteps;
             largestIndex--;
+            counter++;
             if(largestIndex == index){
-                return new int[]{x,y};
+                return numberOfSteps;
             }
         }
-        return new int[]{x,y};
+        return numberOfSteps;
     }
 }

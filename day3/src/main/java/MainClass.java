@@ -4,21 +4,19 @@ public class MainClass {
 
 
     public static void main(String[] args) {
-    SpiralMemory memory = new SpiralMemory();
+        SpiralMemory memory = new SpiralMemory();
 
-    int input = 265149;
-    int test = 1024;
+        int input = 265149;
+        int test = 1024;
 
-    //System.out.println("Input: " + input + "\ncircleIndex: " + memory.calculateNumberOfSteps(input));
-    //System.out.println("Input: " + test + "\ncircleIndex: " + memory.calculateNumberOfSteps(test));
+        int ret = memory.calculateTotalNumberOfSteps(test);
+        System.out.println("Input: " + test);
+        System.out.println("Number of steps = " + ret);
 
-        int[] positions = memory.getPositions(3, 25, 12);
-        System.out.println("circleIndex with index " + 1024 + ": ");
-        System.out.println("X = " + positions[0]);
-        System.out.println("y = " + positions[1]);
-
+        ret = memory.calculateTotalNumberOfSteps(input);
+        System.out.println("Input: " + input);
+        System.out.println("Number of steps = " + ret);
     }
-
 
 
 }
