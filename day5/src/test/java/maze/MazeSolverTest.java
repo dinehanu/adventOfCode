@@ -17,7 +17,10 @@ public class MazeSolverTest {
 
     @Test
     public void getNumberOfStepsToSolveMaze() {
-
         Assert.assertEquals("getNumberOfStepsToSolveMaze", 5, ms.getNumberOfStepsToSolveMaze("mazeTest.txt"));
+        }
+    @Test
+    public void getNumberOfStepsToSolveMaze_PartTwo() {
+        Assert.assertEquals("getNumberOfStepsToSolveMaze_PartTwo", 10, ms.getNumberOfStepsToSolveMaze_PartTwo("mazeTest.txt"));
     }
 }

@@ -15,12 +15,29 @@ public class MazeSolver {
         return calculateStepsToSolveMaze(getMazeFileAsArray(filePath));
     }
 
+    public int getNumberOfStepsToSolveMaze_PartTwo(String filePath) {
+        return calculateStepsToSolveMaze_PartTwo(getMazeFileAsArray(filePath));
+    }
+
     private int calculateStepsToSolveMaze(List<Integer> maze) {
         int index = 0;
         int numberOfSteps = 0;
         while (index < maze.size() && index >= 0) {
             int stepToTake = maze.get(index);
             maze.set(index, (stepToTake + 1));
+            index += stepToTake;
+            numberOfSteps++;
+        }
+        return numberOfSteps;
+    }
+
+    private int calculateStepsToSolveMaze_PartTwo(List<Integer> maze) {
+        int index = 0;
+        int numberOfSteps = 0;
+        while (index < maze.size() && index >= 0) {
+            int stepToTake = maze.get(index);
+            int change = stepToTake >= 3 ? (stepToTake-1) : (stepToTake+1);
+            maze.set(index, change);
             index += stepToTake;
             numberOfSteps++;
         }

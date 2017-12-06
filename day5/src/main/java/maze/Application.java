@@ -17,8 +17,11 @@ public class Application {
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
 
+
             MazeSolver ms = ctx.getBean(MazeSolver.class);
             System.out.println("The maze takes " + ms.getNumberOfStepsToSolveMaze("maze.txt") + " to solve.");
+            System.out.println("Part 2 of the maze takes " + ms.getNumberOfStepsToSolveMaze_PartTwo("maze.txt") + " to solve.");
+
 
         };
     }
