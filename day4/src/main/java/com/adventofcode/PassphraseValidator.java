@@ -16,16 +16,17 @@ public class PassphraseValidator {
         int ret = 0;
         ArrayList<String[]> passphrases = getPassphraseFile(fileName);
         for (String[] line : passphrases) {
+            boolean valid = true;
             for (int i = 0; i < line.length-1; i++) {
-                boolean valid = true;
-                for (int j = i++; j < line.length; j++) {
+
+                for (int j = i+1; j < line.length; j++) {
                     if (checkIfWordIsAnagram(line[i], line[j])) {
                         valid = false;
                     }
                 }
-                if(valid){
-                    ret++;
-                }
+            }
+            if(valid){
+                ret++;
             }
         }
         return ret;

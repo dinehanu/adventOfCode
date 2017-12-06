@@ -10,5 +10,6 @@ public class MainClass {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MainClass.class);
         PassphraseValidator validator = context.getBean(PassphraseValidator.class);
         System.out.println("PassphraseValidator with file: passphrases.txt returns: " + validator.getNumberOfValidPassphrases("passphrases.txt"));
+        System.out.println("Harder passphraseValidator with file: passphrases.txt returns: " + validator.getNumberOfValidPassphrases_Harder("passphrases.txt"));
     }
 }
