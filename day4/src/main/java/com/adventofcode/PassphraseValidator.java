@@ -1,11 +1,11 @@
 package com.adventofcode;
 
-import com.sun.javafx.image.IntPixelGetter;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -16,19 +16,16 @@ public class PassphraseValidator {
         int ret = 0;
         ArrayList<String[]> passphrases = getPassphraseFile(fileName);
         for (String[] line : passphrases) {
-            HashMap<String, Integer> numberOfOccurrences = new HashMap<>();
-            for (String passphrase : line) {
-                int passphraseOccurrences = numberOfOccurrences.containsKey(passphrase) ? (numberOfOccurrences.get(passphrase) + 1) : 1;
-                numberOfOccurrences.put(passphrase, passphraseOccurrences);
-            }
-            boolean valid = true;
-            for (Integer occurrence : numberOfOccurrences.values()) {
-                if(occurrence > 1){
-                    valid = false;
+            for (int i = 0; i < line.length-1; i++) {
+                boolean valid = true;
+                for (int j = i++; j < line.length; j++) {
+                    if (checkIfWordIsAnagram(line[i], line[j])) {
+                        valid = false;
+                    }
                 }
-            }
-            if (valid){
-                ret++;
+                if(valid){
+                    ret++;
+                }
             }
         }
         return ret;
@@ -46,11 +43,11 @@ public class PassphraseValidator {
             }
             boolean valid = true;
             for (Integer occurrence : numberOfOccurrences.values()) {
-                if(occurrence > 1){
+                if (occurrence > 1) {
                     valid = false;
                 }
             }
-            if (valid){
+            if (valid) {
                 ret++;
             }
         }
@@ -74,5 +71,13 @@ public class PassphraseValidator {
             e.printStackTrace();
         }
         return lines;
+    }
+
+    private boolean checkIfWordIsAnagram(String firstWord, String secondWord) {
+        char[] word1 = firstWord.replaceAll("[\\s]", "").toCharArray();
+        char[] word2 = secondWord.replaceAll("[\\s]", "").toCharArray();
+        Arrays.sort(word1);
+        Arrays.sort(word2);
+        return Arrays.equals(word1, word2);
     }
 }
