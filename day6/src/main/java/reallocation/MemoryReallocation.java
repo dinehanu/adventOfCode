@@ -12,30 +12,30 @@ import java.util.Scanner;
 @Component
 public class MemoryReallocation {
 
-    public int getNumberOfStepsToReallocate(String filePath){
+    public int getNumberOfStepsToReallocate(String filePath) {
 
         int ret = 0;
         int[] memory = getMemoryAsArray(filePath);
         List<int[]> visitedAllocations = new ArrayList<>();
 
-        while(!isInList(visitedAllocations, memory)){
+        while (!isInList(visitedAllocations, memory)) {
             int largestNumber = 0;
             int index = 0;
             visitedAllocations.add(memory.clone());
 
             for (int i = 0; i < memory.length; i++) {
-                if(memory[i] > largestNumber){
+                if (memory[i] > largestNumber) {
                     largestNumber = memory[i];
                     index = i;
                 }
             }
             memory[index] = 0;
-            int nextIndex = (index+1) == memory.length ? 0 : (index+1);
+            int nextIndex = (index + 1) == memory.length ? 0 : (index + 1);
             for (int j = 0; j < largestNumber; j++) {
-                if(nextIndex == memory.length){
+                if (nextIndex == memory.length) {
                     nextIndex = 0;
                 }
-                memory[nextIndex] = memory[nextIndex]+1;
+                memory[nextIndex] = memory[nextIndex] + 1;
                 nextIndex++;
             }
             ret++;
@@ -43,35 +43,75 @@ public class MemoryReallocation {
         return ret;
     }
 
-    public int getNumberOfStepsToReallocate_part2(String filePath){
+    public int getNumberOfStepsToReallocate_part2(String filePath) {
 
-        int ret = 0;
         int[] memory = getMemoryAsArray(filePath);
-        List<int[]> visitedAllocations = new ArrayList<>();
+        List<VisitedMemory> visitedAllocations = new ArrayList<>();
 
-        while(!isInList(visitedAllocations, memory)){
+        while (!visitedAllocations.contains(new VisitedMemory(memory.clone(), 0))) {
             int largestNumber = 0;
             int index = 0;
-            visitedAllocations.add(memory.clone());
+            visitedAllocations.add(new VisitedMemory(memory.clone(), 0));
 
             for (int i = 0; i < memory.length; i++) {
-                if(memory[i] > largestNumber){
+                if (memory[i] > largestNumber) {
                     largestNumber = memory[i];
                     index = i;
                 }
             }
             memory[index] = 0;
-            int nextIndex = (index+1) == memory.length ? 0 : (index+1);
+            int nextIndex = (index + 1) == memory.length ? 0 : (index + 1);
             for (int j = 0; j < largestNumber; j++) {
-                if(nextIndex == memory.length){
+                if (nextIndex == memory.length) {
                     nextIndex = 0;
                 }
-                memory[nextIndex] = memory[nextIndex]+1;
+                memory[nextIndex] = memory[nextIndex] + 1;
                 nextIndex++;
             }
-            ret++;
+            addStep(visitedAllocations);
         }
-        return ret;
+        int index = visitedAllocations.indexOf(new VisitedMemory(memory.clone(), 0));
+        return visitedAllocations.get(index).getNumberOfSteps();
+    }
+
+    public void addStep(List<VisitedMemory> list){
+        for (VisitedMemory visitedMemory : list) {
+            visitedMemory.addStep();
+        }
+    }
+
+    private class VisitedMemory {
+
+        int[] memory;
+        int numberOfSteps;
+
+        public VisitedMemory(int[] memory, int numberOfSteps) {
+            this.memory = memory;
+            this.numberOfSteps = numberOfSteps;
+        }
+
+        public void addStep(){
+            numberOfSteps++;
+        }
+
+        public int getNumberOfSteps(){
+            return numberOfSteps;
+        }
+
+        @Override
+        public boolean equals(Object obj){
+            return Arrays.equals(memory, ((VisitedMemory)obj).memory);
+        }
+
+        @Override
+        public int hashCode() {
+            int result = 0;
+            for (int i = 0; i < memory.length; i++) {
+                result += memory[i];
+            }
+            return result;
+        }
+
     }
 
     public static boolean isInList(
