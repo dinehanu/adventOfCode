@@ -43,6 +43,37 @@ public class MemoryReallocation {
         return ret;
     }
 
+    public int getNumberOfStepsToReallocate_part2(String filePath){
+
+        int ret = 0;
+        int[] memory = getMemoryAsArray(filePath);
+        List<int[]> visitedAllocations = new ArrayList<>();
+
+        while(!isInList(visitedAllocations, memory)){
+            int largestNumber = 0;
+            int index = 0;
+            visitedAllocations.add(memory.clone());
+
+            for (int i = 0; i < memory.length; i++) {
+                if(memory[i] > largestNumber){
+                    largestNumber = memory[i];
+                    index = i;
+                }
+            }
+            memory[index] = 0;
+            int nextIndex = (index+1) == memory.length ? 0 : (index+1);
+            for (int j = 0; j < largestNumber; j++) {
+                if(nextIndex == memory.length){
+                    nextIndex = 0;
+                }
+                memory[nextIndex] = memory[nextIndex]+1;
+                nextIndex++;
+            }
+            ret++;
+        }
+        return ret;
+    }
+
     public static boolean isInList(
             final List<int[]> list, final int[] candidate) {
 

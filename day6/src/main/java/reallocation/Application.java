@@ -26,6 +26,8 @@ public class Application {
             log.info("Running memory reallocation ");
             log.info("Running memory reallocation takes " + mem.getNumberOfStepsToReallocate("memory.txt") + " steps");
 
+            log.info("Running memory reallocation part 2 takes " + mem.getNumberOfStepsToReallocate_part2("memory.txt") + " steps");
+
         };
     }
 }

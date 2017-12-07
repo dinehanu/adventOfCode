@@ -19,4 +19,9 @@ public class MemoryReallocationTest {
     public void getNumberOfStepsToReallocate() {
         assertEquals("Memory allocation part 1", 5, mem.getNumberOfStepsToReallocate("memoryTest.txt"));
     }
+
+    @Test
+    public void getNumberOfStepsToReallocate_part2() {
+        assertEquals("Memory allocation part 1", 4, mem.getNumberOfStepsToReallocate_part2("memoryTest.txt"));
+    }
 }
