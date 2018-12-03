@@ -17,7 +17,11 @@ public class ChecksumCalculatorTest {
 
     @Test
     public void calculateChecksum() {
+        assertEquals(12, calculator.calculateChecksum("testfile"));
+    }
 
-        assertEquals(calculator.calculateChecksum("testfile"), 12);
+    @Test
+    public void findMatchingId() {
+        assertEquals("fgij", calculator.findMatchingId("testfile2"));
     }
 }

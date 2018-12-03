@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dad96ab-dea6-4926-bed5-793ec492bb85" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/resources/testfile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/adventOfCode/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/adventOfCode/controller/TestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/adventOfCode/solver/ChecksumCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/adventOfCode/solver/ChecksumCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/se/adventOfCode/solver/ChecksumCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/se/adventOfCode/solver/ChecksumCalculatorTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,25 +26,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="6" />
+          <entry key="java" value="8" />
           <entry key="testfile" value="1" />
+          <entry key="testfile2" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="6" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="JAVA" value="8" />
+          <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1051" />
+          <entry key="java" value="2324" />
           <entry key="xml" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1051" />
+          <entry key="JAVA" value="2324" />
           <entry key="XML" value="33" />
         </counts>
       </usages-collector>
@@ -62,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/se/adventOfCode/solver/ChecksumCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+            <state relative-caret-position="166">
+              <caret line="38" column="80" selection-start-line="38" selection-start-column="80" selection-end-line="38" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,32 +74,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/se/adventOfCode/controller/TestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+            <state relative-caret-position="306">
+              <caret line="18" column="109" selection-start-line="18" selection-start-column="109" selection-end-line="18" selection-end-column="109" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/se/adventOfCode/util/FileReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/se/adventOfCode/solver/ChecksumCalculatorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="20" column="50" lean-forward="true" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -124,10 +106,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/input" />
         <option value="$PROJECT_DIR$/src/main/java/se/adventOfCode/util/FileReader.java" />
         <option value="$PROJECT_DIR$/src/test/java/resources/testfile" />
-        <option value="$PROJECT_DIR$/src/test/java/se/adventOfCode/solver/ChecksumCalculatorTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/se/adventOfCode/solver/ChecksumCalculator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/resources/testfile2" />
         <option value="$PROJECT_DIR$/src/main/java/se/adventOfCode/controller/TestController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/se/adventOfCode/solver/ChecksumCalculatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/se/adventOfCode/solver/ChecksumCalculator.java" />
       </list>
     </option>
   </component>
@@ -241,7 +224,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543823783709" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543836635789" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -303,13 +286,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ChecksumCalculatorTest.findMatchingId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.adventOfCode.solver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.adventOfCode.solver" />
+      <option name="MAIN_CLASS_NAME" value="se.adventOfCode.solver.ChecksumCalculatorTest" />
+      <option name="METHOD_NAME" value="findMatchingId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit.ChecksumCalculatorTest.calculateChecksum" />
       <item itemvalue="Application.Application" />
+      <item itemvalue="JUnit.ChecksumCalculatorTest.findMatchingId" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.ChecksumCalculatorTest.findMatchingId" />
         <item itemvalue="JUnit.ChecksumCalculatorTest.calculateChecksum" />
       </list>
     </recent_temporary>
@@ -328,36 +329,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ChecksumCalculatorTest_calculateChecksum - 2018.12.03 at 08h 32m 24s.xml">
-      <configuration name="ChecksumCalculatorTest.calculateChecksum" configurationId="JUnit" />
+    <history-entry file="ChecksumCalculatorTest_findMatchingId - 2018.12.03 at 10h 20m 03s.xml">
+      <configuration name="ChecksumCalculatorTest.findMatchingId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChecksumCalculatorTest_calculateChecksum - 2018.12.03 at 08h 33m 04s.xml">
-      <configuration name="ChecksumCalculatorTest.calculateChecksum" configurationId="JUnit" />
+    <history-entry file="ChecksumCalculatorTest_findMatchingId - 2018.12.03 at 10h 20m 56s.xml">
+      <configuration name="ChecksumCalculatorTest.findMatchingId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChecksumCalculatorTest_calculateChecksum - 2018.12.03 at 08h 34m 49s.xml">
-      <configuration name="ChecksumCalculatorTest.calculateChecksum" configurationId="JUnit" />
+    <history-entry file="ChecksumCalculatorTest_findMatchingId - 2018.12.03 at 10h 23m 08s.xml">
+      <configuration name="ChecksumCalculatorTest.findMatchingId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChecksumCalculatorTest_calculateChecksum - 2018.12.03 at 08h 36m 19s.xml">
-      <configuration name="ChecksumCalculatorTest.calculateChecksum" configurationId="JUnit" />
+    <history-entry file="ChecksumCalculatorTest_findMatchingId - 2018.12.03 at 12h 06m 59s.xml">
+      <configuration name="ChecksumCalculatorTest.findMatchingId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChecksumCalculatorTest_calculateChecksum - 2018.12.03 at 08h 41m 02s.xml">
-      <configuration name="ChecksumCalculatorTest.calculateChecksum" configurationId="JUnit" />
+    <history-entry file="ChecksumCalculatorTest_findMatchingId - 2018.12.03 at 12h 07m 15s.xml">
+      <configuration name="ChecksumCalculatorTest.findMatchingId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChecksumCalculatorTest_calculateChecksum - 2018.12.03 at 08h 41m 33s.xml">
-      <configuration name="ChecksumCalculatorTest.calculateChecksum" configurationId="JUnit" />
+    <history-entry file="ChecksumCalculatorTest_findMatchingId - 2018.12.03 at 12h 10m 02s.xml">
+      <configuration name="ChecksumCalculatorTest.findMatchingId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChecksumCalculatorTest_calculateChecksum - 2018.12.03 at 08h 55m 02s.xml">
-      <configuration name="ChecksumCalculatorTest.calculateChecksum" configurationId="JUnit" />
+    <history-entry file="ChecksumCalculatorTest_findMatchingId - 2018.12.03 at 12h 10m 36s.xml">
+      <configuration name="ChecksumCalculatorTest.findMatchingId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChecksumCalculatorTest_calculateChecksum - 2018.12.03 at 08h 55m 40s.xml">
-      <configuration name="ChecksumCalculatorTest.calculateChecksum" configurationId="JUnit" />
+    <history-entry file="ChecksumCalculatorTest_findMatchingId - 2018.12.03 at 12h 11m 18s.xml">
+      <configuration name="ChecksumCalculatorTest.findMatchingId" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ChecksumCalculatorTest_findMatchingId - 2018.12.03 at 12h 18m 03s.xml">
+      <configuration name="ChecksumCalculatorTest.findMatchingId" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ChecksumCalculatorTest_findMatchingId - 2018.12.03 at 12h 18m 27s.xml">
+      <configuration name="ChecksumCalculatorTest.findMatchingId" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -369,8 +376,8 @@
       <window_info anchor="bottom" id="FindBugs-IDEA" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39696312" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.1583514" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3340564" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.34164858" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -420,17 +427,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/se/adventOfCode/solver/ChecksumCalculatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="50" lean-forward="true" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/resources/testfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/se/adventOfCode/controller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="109" selection-start-line="18" selection-start-column="109" selection-end-line="18" selection-end-column="109" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/resources/testfile2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/se/adventOfCode/solver/ChecksumCalculatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="69" lean-forward="true" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
+          <folding>
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -443,18 +471,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/se/adventOfCode/solver/ChecksumCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/se/adventOfCode/controller/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        <state relative-caret-position="166">
+          <caret line="38" column="80" selection-start-line="38" selection-start-column="80" selection-end-line="38" selection-end-column="80" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

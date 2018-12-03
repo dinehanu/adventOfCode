@@ -15,8 +15,8 @@ public class TestController {
     public String index() {
         return "The calculated checksum is: " + calculator.calculateChecksum()
                 + "</br>"
-                + "</br>";
-                //+ "The first duplicate frequency is: " + calculator.calculateFirstDuplicateFrequency();
+                + "</br>"
+                + "The two correct box id:s have the following common leters: " + calculator.findMatchingId();
     }
 
 }
