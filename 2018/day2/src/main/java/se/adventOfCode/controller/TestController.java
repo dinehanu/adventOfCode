@@ -13,7 +13,7 @@ public class TestController {
 
     @RequestMapping("/")
     public String index() {
-        return "The resulting frequency is: " + calculator.calculateChecksum()
+        return "The calculated checksum is: " + calculator.calculateChecksum()
                 + "</br>"
                 + "</br>";
                 //+ "The first duplicate frequency is: " + calculator.calculateFirstDuplicateFrequency();

@@ -4,6 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import se.adventOfCode.util.FileReader;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 @Component
 public class ChecksumCalculator {
 
@@ -13,8 +17,38 @@ public class ChecksumCalculator {
     public long calculateChecksum() { return this.calculateChecksum("input"); }
 
     public long calculateChecksum(String filepath) {
-        long checksum = 0;
+        int[] numberOfOccurences = getNumberOfOccurences(fileReader.getFileContentAsArray(filepath));
+        return numberOfOccurences[2]*numberOfOccurences[3];
+    }
 
-        return checksum;
+    private int[] getNumberOfOccurences(List<String> lines){
+        int[] totalNumberOfOccurences = new int[]{0,0,0,0,0};
+        for(String line : lines){
+            int[] checkSumNumbers = getOccurencesAsArray(getCharacterOccurenceInString(line));
+            for (int i = 0; i < 5; i++) {
+                totalNumberOfOccurences[i] = totalNumberOfOccurences[i] + checkSumNumbers[i];
+            }
+        }
+        return totalNumberOfOccurences;
+    }
+
+    private Map<Character, Integer> getCharacterOccurenceInString(String line){
+        Map<Character, Integer> ret = new HashMap<>();
+        for (char character: line.toCharArray()) {
+            if(ret.containsKey(character)){
+                ret.put(character, (ret.get(character)+1));
+            } else {
+                ret.put(character, 1);
+            }
+        }
+        return ret;
+    }
+
+    private int[] getOccurencesAsArray(Map<Character, Integer> characters){
+        int[] ret = new int[]{0,0,0,0,0};
+        for (char key: characters.keySet()) {
+            ret[characters.get(key)] = 1;
+        }
+        return ret;
     }
 }
