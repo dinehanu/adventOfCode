@@ -20,4 +20,9 @@ public class Day4SolverTest {
     assertEquals(240, solver.runStrategyOne("input"));
     }
 
+    @Test
+    public void runStrategyTwo(){
+        assertEquals(4455, solver.runStrategyTwo("input"));
+    }
+
 }

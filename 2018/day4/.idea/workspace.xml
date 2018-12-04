@@ -1,30 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/se/adventofcode/solvers/Day4Solver.java" line="50" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/se/adventofcode/solvers/Day4Solver.java" line="87" />
     <bookmark url="file://$PROJECT_DIR$/src/main/java/se/adventofcode/solvers/Day4Solver.java" line="37" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed7f457f-a539-4efc-95d5-90afff10ffb1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/se/adventofcode/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/se/adventofcode/controller/RestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/se/adventofcode/solvers/Day4Solver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/se/adventofcode/util/FileReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/input" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/result.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/se/adventofcode/solvers/Day4SolverTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/input" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day3/src/main/java/se/adventofcode/solver/OverlapCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../day3/src/main/java/se/adventofcode/solver/OverlapCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/adventofcode/controller/RestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/adventofcode/controller/RestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/adventofcode/solvers/Day4Solver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/adventofcode/solvers/Day4Solver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/se/adventofcode/solvers/Day4SolverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/se/adventofcode/solvers/Day4SolverTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,8 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/se/adventofcode/controller/RestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            <state relative-caret-position="289">
+              <caret line="17" column="39" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,11 +54,36 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/result.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/se/adventofcode/solvers/Day4Solver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="51" column="31" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+            <state relative-caret-position="357">
+              <caret line="68" column="68" selection-start-line="68" selection-start-column="68" selection-end-line="68" selection-end-column="68" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5063#5064#0" expanded="true" />
+                <element signature="e#5140#5141#0" expanded="true" />
+                <element signature="e#5514#5515#0" expanded="true" />
+                <element signature="e#5593#5594#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/se/adventofcode/solvers/Day4SolverTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,10 +120,10 @@
         <option value="$PROJECT_DIR$/src/test/resources/input" />
         <option value="$PROJECT_DIR$/src/test/java/se/adventofcode/solvers/Day4SolverTest.groovy" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/se/adventofcode/solvers/Day4SolverTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/se/adventofcode/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/result.html" />
         <option value="$PROJECT_DIR$/src/main/java/se/adventofcode/controller/RestController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/result.html" />
+        <option value="$PROJECT_DIR$/src/test/java/se/adventofcode/solvers/Day4SolverTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/se/adventofcode/solvers/Day4Solver.java" />
       </list>
     </option>
@@ -256,7 +266,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543956562078" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543957210144" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -337,9 +347,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Day4SolverTest.runStrategyTwo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.adventofcode.solvers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.adventofcode.solvers" />
+      <option name="MAIN_CLASS_NAME" value="se.adventofcode.solvers.Day4SolverTest" />
+      <option name="METHOD_NAME" value="runStrategyTwo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.Day4SolverTest.runStrategyTwo" />
         <item itemvalue="JUnit.Day4SolverTest.runStrategyOne" />
         <item itemvalue="JUnit.Day4SolverTest" />
       </list>
@@ -359,12 +386,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Day4SolverTest_runStrategyOne - 2018.12.04 at 20h 54m 04s.xml">
-      <configuration name="Day4SolverTest.runStrategyOne" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Day4SolverTest_runStrategyOne - 2018.12.04 at 20h 54m 31s.xml">
-      <configuration name="Day4SolverTest.runStrategyOne" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Day4SolverTest_runStrategyOne - 2018.12.04 at 20h 54m 35s.xml">
       <configuration name="Day4SolverTest.runStrategyOne" configurationId="JUnit" />
     </history-entry>
@@ -389,6 +410,12 @@
     <history-entry file="Day4SolverTest_runStrategyOne - 2018.12.04 at 21h 29m 18s.xml">
       <configuration name="Day4SolverTest.runStrategyOne" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Day4SolverTest_runStrategyTwo - 2018.12.04 at 21h 57m 32s.xml">
+      <configuration name="Day4SolverTest.runStrategyTwo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Day4SolverTest_runStrategyTwo - 2018.12.04 at 21h 58m 37s.xml">
+      <configuration name="Day4SolverTest.runStrategyTwo" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -408,8 +435,8 @@
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.18418202" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.37703142" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3391116" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.312026" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -428,9 +455,9 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/se/adventofcode/solvers/Day4Solver.java</url>
-          <line>48</line>
+          <line>75</line>
           <properties />
-          <option name="timeStamp" value="25" />
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -464,18 +491,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/se/adventofcode/solvers/Day4SolverTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#552#553#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -490,27 +505,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/se/adventofcode/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/se/adventofcode/controller/RestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -524,12 +522,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/se/adventofcode/solvers/Day4Solver.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/result.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="51" column="31" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+        <state relative-caret-position="136">
+          <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/se/adventofcode/controller/RestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/se/adventofcode/solvers/Day4SolverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/se/adventofcode/solvers/Day4Solver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="68" column="68" selection-start-line="68" selection-start-column="68" selection-end-line="68" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5063#5064#0" expanded="true" />
+            <element signature="e#5140#5141#0" expanded="true" />
+            <element signature="e#5514#5515#0" expanded="true" />
+            <element signature="e#5593#5594#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -15,7 +15,8 @@ public class RestController {
 
     @GetMapping("/greeting")
     public String greeting(@RequestParam(name="name", required=false, defaultValue="input") String name, Model model) {
-        model.addAttribute("result", solver.runStrategyOne(name));
+        model.addAttribute("strategyOne", solver.runStrategyOne(name));
+        model.addAttribute("strategyTwo", solver.runStrategyTwo(name));
         return "result";
     }
 

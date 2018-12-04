@@ -39,6 +39,43 @@ public class Day4Solver {
         return Integer.parseInt(longestId) * getMinuteMostOftenAsleep(longestId, lines);
     }
 
+    public long runStrategyTwo(){
+        return runStrategyTwo("input");
+    }
+
+    public long runStrategyTwo(String filename){
+        List<String> lines = fileReader.getFileContentAsArray(filename);
+        List<String> sortedList = sortListByDateAndTime(lines);
+        List<String> guardIds = getGuardIds(lines);
+
+        String longestId = "";
+        long MostTimeAsleep = 0;
+        for (String id : guardIds) {
+            List<String> linesForId = getLinesForId(id, lines);
+            long timesAsleep = getMostOftenTimeAsleep(id, linesForId);
+            if(timesAsleep > MostTimeAsleep){
+                longestId = id;
+                MostTimeAsleep = timesAsleep;
+            }
+        }
+        return Integer.parseInt(longestId) * getMinuteMostOftenAsleep(longestId, lines);
+    }
+
+    private Integer getMostOftenTimeAsleep(String id, List<String> lines){
+        List<Integer> timesAsleep = new ArrayList<Integer>(Collections.nCopies(60, 0));
+
+        for (int i = 0; i<lines.size()-1; i+=2) {
+            LocalDateTime fallAsleepTime = getLocalDateTimeFromLine(lines.get(i));
+            LocalDateTime awakeTime = getLocalDateTimeFromLine(lines.get(i+1));
+            long duration = Duration.between(fallAsleepTime, awakeTime).toMinutes();
+            for (int j = 0; j < duration; j++) {
+                int minute = fallAsleepTime.getMinute() + j;
+                timesAsleep.set(minute, timesAsleep.get(minute)+1);
+            }
+        }
+        return Collections.max(timesAsleep);
+    }
+
     private Integer getMinuteMostOftenAsleep(String id, List<String> lines){
         List<Integer> timesAsleep = new ArrayList<Integer>(Collections.nCopies(60, 0));
         List<String> linesForId = getLinesForId(id, lines);
