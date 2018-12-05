@@ -15,4 +15,9 @@ public class Day5SolverTest {
     public void calculateRemainingUnits() {
         assertEquals(10, solver.calculateRemainingUnits());
     }
+
+    @org.junit.Test
+    public void calculateImprovedRemainingUnits() {
+        assertEquals(4, solver.calculateImprovedRemainingUnits());
+    }
 }

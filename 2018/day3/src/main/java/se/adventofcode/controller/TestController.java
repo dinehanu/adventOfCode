@@ -16,6 +16,9 @@ public class TestController {
         return "The number of overlapping square inches are: " + calculator.calculateOverlap()
                 + "</br>"
                 + "</br>"
+                + "The id of the non overlapping piece of fabric is: " + calculator.calculateNonOverlapingId()
+                + "</br>"
+                + "</br>"
                 + "Showing 100x100 of the matrix"
                 + "</br>"
                 + getTable();

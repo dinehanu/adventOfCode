@@ -19,4 +19,9 @@ public class OverlapCalculatorTest {
     public void calculateOverlap() {
         assertEquals(4, calculator.calculateOverlap("testinput1"));
     }
+
+    @Test
+    public void calculateNonOverlapingId() {
+        assertEquals(3, calculator.calculateNonOverlapingId("testinput1"));
+    }
 }

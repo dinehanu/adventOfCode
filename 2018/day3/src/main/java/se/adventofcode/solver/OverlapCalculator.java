@@ -19,10 +19,42 @@ public class OverlapCalculator {
 
     public long calculateOverlap(String filepath) {
         String[][] calculatedMatrix = getMatrix(filepath);
-        return numberOfX(calculatedMatrix);
+        return calculateNumberOfX(calculatedMatrix);
     }
 
-    private int numberOfX(String[][] matrix){
+    public long calculateNonOverlapingId() { return this.calculateNonOverlapingId("input"); }
+
+    public long calculateNonOverlapingId(String filepath) {
+        String[][] calculatedMatrix = getMatrix(filepath);
+        return getIdOfNonOverlappingFabric(calculatedMatrix, filepath);
+    }
+
+    private int getIdOfNonOverlappingFabric(String[][] matrix, String filepath){
+
+        List<String> lines = fileReader.getFileContentAsArray(filepath);
+        for (int lineIndex = 0; lineIndex<lines.size(); lineIndex++){
+            boolean noX = true;
+            int[] coordinates = getCoordinates(lines.get(lineIndex));
+            int[] size = getSize(lines.get(lineIndex));
+            if(coordinates.length == 2 && size.length == 2){
+
+                for (int x = coordinates[0]; x < coordinates[0]+size[0]; x++){
+                    for (int y= coordinates[1]; y < coordinates[1]+size[1]; y++){
+                        if(matrix[y][x].equals("X")){
+                            noX = false;
+                        }
+                    }
+                }
+            }
+            if(noX){
+                return lineIndex + 1;
+            }
+        }
+
+        return 0;
+    }
+
+    private int calculateNumberOfX(String[][] matrix){
         int ret = 0;
         for (int x = 0; x<matrix.length; x++){
             for (int y = 0; y<matrix[x].length; y++){
