@@ -8,7 +8,7 @@ public class Application {
 
         Day5Solver solver = new Day5Solver();
 
-//        System.out.println("Kortaste möjliga polymer är: " + solver.calculateRemainingUnits());
+        System.out.println("Kortaste möjliga polymer är: " + solver.calculateRemainingUnits());
 
         System.out.println("Kortase möjliga förbättrade polymer är: " + solver.calculateImprovedRemainingUnits());
 

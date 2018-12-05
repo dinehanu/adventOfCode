@@ -65,12 +65,10 @@ public class Day5Solver {
                     if(Character.toLowerCase(sb.charAt(i)) == Character.toLowerCase(sb.charAt(i+1)) && Character.isUpperCase(sb.charAt(i+1))){
                         sb.delete(i, i+2);
                         removed = true;
-                        break;
                     }
                 } else if(Character.toLowerCase(sb.charAt(i)) == Character.toLowerCase(sb.charAt(i+1)) && Character.isLowerCase(sb.charAt(i+1))){
                         sb.delete(i, i+2);
                         removed = true;
-                        break;
                     }
                 }
             }
