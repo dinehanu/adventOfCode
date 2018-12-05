@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad91ddcb-bd98-4dea-8ec4-1e44c3094728" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/se/adventofcode/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/se/adventofcode/solver/Day5Solver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/se/adventofcode/util/FileReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/input" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/se/adventofcode/solver/Day5SolverTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/input" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/adventofcode/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/adventofcode/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/adventofcode/solver/Day5Solver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/adventofcode/solver/Day5Solver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/se/adventofcode/solver/Day5SolverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/se/adventofcode/solver/Day5SolverTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,46 +15,75 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/day5$Day5SolverTest_calculateImprovedRemainingUnits.ic" NAME="Day5SolverTest.calculateImprovedRemainingUnits Coverage Results" MODIFIED="1544001916671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>se.adventofcode.solver.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1050200446">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="630" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="630" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="input" value="2" />
+          <entry key="java" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="1" />
+          <entry key="PLAIN_TEXT" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="323">
               <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/se/adventofcode/Application.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="92" selection-start-line="10" selection-start-column="92" selection-end-line="10" selection-end-column="92" />
+              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/se/adventofcode/solver/Day5Solver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-              <folding>
-                <element signature="e#254#255#0" expanded="true" />
-                <element signature="e#299#300#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/se/adventofcode/util/FileReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+            <state relative-caret-position="884">
+              <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#254#255#0" expanded="true" />
+                <element signature="e#309#310#0" expanded="true" />
+                <element signature="e#518#519#0" expanded="true" />
+                <element signature="e#573#574#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,11 +92,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/se/adventofcode/solver/Day5SolverTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+            <state relative-caret-position="306">
+              <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
               <folding>
-                <element signature="e#279#280#0" expanded="true" />
-                <element signature="e#309#310#0" expanded="true" />
+                <element signature="e#439#440#0" expanded="true" />
+                <element signature="e#512#513#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,10 +121,10 @@
         <option value="$PROJECT_DIR$/src/main/java/util/FileReader.java" />
         <option value="$PROJECT_DIR$/src/main/resources/input" />
         <option value="$PROJECT_DIR$/src/test/resources/input" />
-        <option value="$PROJECT_DIR$/src/test/java/se/adventofcode/solver/Day5SolverTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/se/adventofcode/util/FileReader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/se/adventofcode/solver/Day5Solver.java" />
+        <option value="$PROJECT_DIR$/src/test/java/se/adventofcode/solver/Day5SolverTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/se/adventofcode/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/se/adventofcode/solver/Day5Solver.java" />
       </list>
     </option>
   </component>
@@ -129,7 +152,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -165,33 +188,7 @@
               <item name="day5" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="day5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day5" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="adventofcode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="day5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day5" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="adventofcode" type="462c0819:PsiDirectoryNode" />
-              <item name="solver" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="day5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day5" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="adventofcode" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="day5" type="b2602c69:ProjectViewProjectNode" />
@@ -213,19 +210,27 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="solver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="day5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="day5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543991380022" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544009349526" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -268,6 +273,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Day5SolverTest.calculateImprovedRemainingUnits" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.adventofcode.solver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.adventofcode.solver" />
+      <option name="MAIN_CLASS_NAME" value="se.adventofcode.solver.Day5SolverTest" />
+      <option name="METHOD_NAME" value="calculateImprovedRemainingUnits" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Day5SolverTest.calculateRemainingUnits" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="day5" />
       <extension name="coverage">
@@ -284,9 +305,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Application" />
+      <item itemvalue="JUnit.Day5SolverTest.calculateRemainingUnits" />
+      <item itemvalue="JUnit.Day5SolverTest.calculateImprovedRemainingUnits" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.Day5SolverTest.calculateImprovedRemainingUnits" />
         <item itemvalue="JUnit.Day5SolverTest.calculateRemainingUnits" />
       </list>
     </recent_temporary>
@@ -305,42 +332,41 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Day5SolverTest_calculateRemainingUnits - 2018.12.05 at 07h 22m 29s.xml">
-      <configuration name="Day5SolverTest.calculateRemainingUnits" configurationId="JUnit" />
+    <history-entry file="Day5SolverTest_calculateImprovedRemainingUnits - 2018.12.05 at 10h 25m 16s.xml">
+      <configuration name="Day5SolverTest.calculateImprovedRemainingUnits" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Day5SolverTest_calculateRemainingUnits - 2018.12.05 at 07h 22m 39s.xml">
-      <configuration name="Day5SolverTest.calculateRemainingUnits" configurationId="JUnit" />
+    <history-entry file="Day5SolverTest_calculateImprovedRemainingUnits - 2018.12.05 at 10h 25m 22s.xml">
+      <configuration name="Day5SolverTest.calculateImprovedRemainingUnits" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Day5SolverTest_calculateRemainingUnits - 2018.12.05 at 07h 23m 34s.xml">
-      <configuration name="Day5SolverTest.calculateRemainingUnits" configurationId="JUnit" />
+    <history-entry file="Day5SolverTest_calculateImprovedRemainingUnits - 2018.12.05 at 10h 25m 30s.xml">
+      <configuration name="Day5SolverTest.calculateImprovedRemainingUnits" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Day5SolverTest_calculateRemainingUnits - 2018.12.05 at 07h 24m 13s.xml">
-      <configuration name="Day5SolverTest.calculateRemainingUnits" configurationId="JUnit" />
+    <history-entry file="Day5SolverTest_calculateImprovedRemainingUnits - 2018.12.05 at 10h 31m 00s.xml">
+      <configuration name="Day5SolverTest.calculateImprovedRemainingUnits" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Day5SolverTest_calculateRemainingUnits - 2018.12.05 at 07h 25m 04s.xml">
-      <configuration name="Day5SolverTest.calculateRemainingUnits" configurationId="JUnit" />
+    <history-entry file="Day5SolverTest_calculateImprovedRemainingUnits - 2018.12.05 at 12h 14m 00s.xml">
+      <configuration name="Day5SolverTest.calculateImprovedRemainingUnits" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Day5SolverTest_calculateRemainingUnits - 2018.12.05 at 07h 25m 22s.xml">
-      <configuration name="Day5SolverTest.calculateRemainingUnits" configurationId="JUnit" />
+    <history-entry file="Day5SolverTest_calculateImprovedRemainingUnits - 2018.12.05 at 12h 14m 29s.xml">
+      <configuration name="Day5SolverTest.calculateImprovedRemainingUnits" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Day5SolverTest_calculateRemainingUnits - 2018.12.05 at 07h 26m 12s.xml">
-      <configuration name="Day5SolverTest.calculateRemainingUnits" configurationId="JUnit" />
+    <history-entry file="Day5SolverTest_calculateImprovedRemainingUnits - 2018.12.05 at 12h 15m 40s.xml">
+      <configuration name="Day5SolverTest.calculateImprovedRemainingUnits" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Day5SolverTest_calculateRemainingUnits - 2018.12.05 at 07h 27m 33s.xml">
-      <configuration name="Day5SolverTest.calculateRemainingUnits" configurationId="JUnit" />
+    <history-entry file="Day5SolverTest_calculateImprovedRemainingUnits - 2018.12.05 at 12h 16m 32s.xml">
+      <configuration name="Day5SolverTest.calculateImprovedRemainingUnits" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Day5SolverTest_calculateRemainingUnits - 2018.12.05 at 07h 28m 13s.xml">
-      <configuration name="Day5SolverTest.calculateRemainingUnits" configurationId="JUnit" />
+    <history-entry file="Day5SolverTest_calculateImprovedRemainingUnits - 2018.12.05 at 12h 18m 34s.xml">
+      <configuration name="Day5SolverTest.calculateImprovedRemainingUnits" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Day5SolverTest_calculateRemainingUnits - 2018.12.05 at 07h 28m 51s.xml">
-      <configuration name="Day5SolverTest.calculateRemainingUnits" configurationId="JUnit" />
+    <history-entry file="Day5SolverTest_calculateImprovedRemainingUnits - 2018.12.05 at 12h 18m 37s.xml">
+      <configuration name="Day5SolverTest.calculateImprovedRemainingUnits" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -348,17 +374,21 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Learn" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3997833" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3438178" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.23969631" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32995737" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -369,39 +399,10 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/se/adventofcode/solver/Day5Solver.java</url>
-          <line>37</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/se/adventofcode/solver/Day5Solver.java</url>
-          <line>32</line>
-          <properties />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/input">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="50000" selection-start-column="50000" selection-end-column="50000" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/input">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -409,14 +410,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/se/adventofcode/solver/Day5SolverTest.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
-          <folding>
-            <element signature="e#279#280#0" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -430,21 +427,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/se/adventofcode/solver/Day5Solver.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/se/adventofcode/solver/Day5SolverTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="306">
+          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
           <folding>
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/input">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="50000" selection-start-column="50000" selection-end-column="50000" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/se/adventofcode/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="92" selection-start-line="10" selection-start-column="92" selection-end-line="10" selection-end-column="92" />
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/se/adventofcode/solver/Day5Solver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#254#255#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#518#519#0" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
