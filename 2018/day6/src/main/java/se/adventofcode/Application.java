@@ -10,5 +10,7 @@ public class Application {
 
         System.out.println("Första svaret är: " + solver.solveFirstTask() );
 
+        System.out.println("Andra svaret är: " + solver.solveSecondTask(10000) );
+
     }
 }

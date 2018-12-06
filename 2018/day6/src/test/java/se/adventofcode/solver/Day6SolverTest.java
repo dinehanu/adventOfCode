@@ -18,4 +18,9 @@ class Day6SolverTest {
     void solveFirstTask() {
         assertEquals(17, solver.solveFirstTask());
     }
+
+    @Test
+    void solveSecondTask() {
+        assertEquals(16, solver.solveSecondTask(32));
+    }
 }

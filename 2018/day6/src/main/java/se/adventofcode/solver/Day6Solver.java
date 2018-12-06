@@ -2,8 +2,7 @@ package se.adventofcode.solver;
 
 import se.adventofcode.util.FileReader;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Day6Solver {
 
@@ -17,7 +16,63 @@ public class Day6Solver {
         List<String> lines = fileReader.getFileContentAsArray("input");
         List<Coordinate> coordinates = getCoordinates(lines);
         Point[][] matrix = getFilledMatrix(coordinates);
-        return 0;
+        return getLargestGrid(matrix);
+    }
+
+    public long solveSecondTask(int distanceLesserThan){
+        List<String> lines = fileReader.getFileContentAsArray("input");
+        List<Coordinate> coordinates = getCoordinates(lines);
+        return getSmallestGrid(coordinates, distanceLesserThan);
+    }
+
+    private long getSmallestGrid(List<Coordinate> coordinates, int distanceLesserThan){
+        long gridSize = 0;
+        for (int x = 0; x < 1000 ; x++) {
+            for (int y = 0; y < 1000 ; y++) {
+                long summedDistance = getSummedDistance(coordinates,new Coordinate(x, y));
+                if(summedDistance < distanceLesserThan){
+                    gridSize++;
+                }
+            }
+        }
+        return gridSize;
+    }
+
+    private long getSummedDistance(List<Coordinate> coordinates, Coordinate coordinate){
+        long summedDistances = 0;
+        for (Coordinate coordinateInList : coordinates) {
+            summedDistances += calculateDistance(coordinateInList, coordinate);
+        }
+        return summedDistances;
+    }
+
+    private long getLargestGrid(Point[][] matrix){
+
+        Map<Integer, Integer> gridSize = new HashMap<>();
+
+        for (int x = 0; x < matrix.length ; x++) {
+            for (int y = 0; y < matrix[x].length ; y++) {
+                if(!matrix[x][y].equalDistance){
+                    if(gridSize.containsKey( matrix[x][y].index)){
+                        gridSize.put( matrix[x][y].index, gridSize.get(matrix[x][y].index)+1);
+                    } else {
+                        gridSize.put(matrix[x][y].index, 1);
+                    }
+                }
+            }
+        }
+        gridSize = removeInfiniteGrids(gridSize, matrix);
+        return Collections.max(gridSize.values());
+    }
+
+    private Map<Integer, Integer> removeInfiniteGrids(Map<Integer, Integer> gridsizes, Point[][] matrix){
+        for (int i = 0; i < 1000; i++) {
+            gridsizes.remove(matrix[i][0].index);
+            gridsizes.remove(matrix[i][999].index);
+            gridsizes.remove(matrix[0][i].index);
+            gridsizes.remove(matrix[999][i].index);
+        }
+        return gridsizes;
     }
 
 
@@ -30,7 +85,7 @@ public class Day6Solver {
 
                     Point point = new Point(i, calculateDistance(coordinates.get(i), new Coordinate(x, y)));
 
-                    if(matrix[x][y] == null || matrix[x][y].compareTo(point) < 0){
+                    if(matrix[x][y] == null || matrix[x][y].compareTo(point) > 0){
                         matrix[x][y]= point;
                     } else if(matrix[x][y].compareTo(point) == 0){
                         matrix[x][y].equalDistance = true;
@@ -38,8 +93,6 @@ public class Day6Solver {
                 }
             }
         }
-
-
     return matrix;
     }
 
