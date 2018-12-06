@@ -16,6 +16,6 @@ class Day6SolverTest {
 
     @Test
     void solveFirstTask() {
-        assertEquals(6, solver.solveFirstTask());
+        assertEquals(17, solver.solveFirstTask());
     }
 }
