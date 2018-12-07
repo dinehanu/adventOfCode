@@ -7,6 +7,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+import static java.util.Comparator.comparing;
+
 public class Day7Solver {
 
     private final FileReader fileReader;
@@ -27,35 +29,57 @@ public class Day7Solver {
         return calculateTimeForSteps(getWorkers(numberOfWorkers), steps, timeForTask);
     }
 
-    private List<Integer> getWorkers(int numberOfWorkers){
-        return IntStream.range(0,4).map(value -> value = 0).boxed().collect(Collectors.toList());
+    private class Worker{
+        private int time = 0;
+        private String currentTask = null;
+
+        public int getTime(){
+            return time;
+        }
     }
 
-    private int calculateTimeForSteps(List<Integer> workers, Map<String, List<String>> steps, int timeForTask) {
+    private List<Worker> getWorkers(int numberOfWorkers){
+        return IntStream.range(0,numberOfWorkers).mapToObj(value -> new Worker()).collect(Collectors.toList());
+    }
+
+
+    private int calculateTimeForSteps(List<Worker> workers, Map<String, List<String>> steps, int timeForTask) {
         int timeSpent = 0;
         int nrStepsTaken = 0;
-
+        Map<String, List<String>> originalSteps = new HashMap<String, List<String>>(steps);
         int mapSize = steps.keySet().size();
 
         while(mapSize != nrStepsTaken){
-            List<String> availableSteps = getAvailableTests(steps);
+            final int currentTimeSpent = timeSpent;
+            List<String> tasksBeingWorkedOn = workers.stream().filter(worker -> worker.time > currentTimeSpent).map(worker -> worker.currentTask).collect(Collectors.toList());
+            List<String> lockedTasks = new ArrayList<>();
+            for (String task: tasksBeingWorkedOn) {
+                lockedTasks.addAll(originalSteps.get(task));
+            }
+            List<String> availableSteps = getAvailableTests(steps, lockedTasks);
+
+            if(availableSteps.size() == 0){
+                List<Worker> test = workers.stream().filter(worker -> worker.currentTask == tasksBeingWorkedOn.get(0)).collect(Collectors.toList());
+                timeSpent = workers.stream().filter(worker -> worker.currentTask == tasksBeingWorkedOn.get(0)).collect(Collectors.toList()).get(0).time;
+                continue;
+            }
 
             for (String step: availableSteps) {
                 for (int workerIndex = 0; workerIndex < workers.size(); workerIndex++) {
-                    if(workers.get(workerIndex) <= timeSpent){
-                        workers.set(workerIndex, timeSpent + getTimeForStep(step, timeForTask));
+                    Worker worker = workers.get(workerIndex);
+                    if(worker.time <= timeSpent){
+                        worker.time = timeSpent + getTimeForStep(step, timeForTask);
+                        worker.currentTask = step;
+                        workers.set(workerIndex, worker);
                         nrStepsTaken++;
-//                        if(workerIndex == 0){
-//                            timeSpent += getTimeForStep(step, timeForTask);
-//                        }
+                        steps.remove(step);
                         break;
                     }
                 }
-                steps.remove(step);
             }
-            timeSpent = workers.get(0);
+            timeSpent = workers.get(0).time;
+            workers.sort((Worker o1, Worker o2)->o1.time-o2.time);
         }
-
         return timeSpent;
     }
 
@@ -64,11 +88,11 @@ public class Day7Solver {
         return letterArray.indexOf(step)+1 + timeForTask;
     }
 
-    private List<String> getAvailableTests(Map<String, List<String>> steps){
+    private List<String> getAvailableTests(Map<String, List<String>> steps, List<String> tasksBeingWorkedOn){
         List<String> availableSteps = new ArrayList<>(steps.keySet());
         for (String key: steps.keySet()) {
             for (String key2: steps.keySet()) {
-                if(steps.get(key2).contains(key)) {
+                if(steps.get(key2).contains(key) || tasksBeingWorkedOn.contains(key)) {
                     availableSteps.remove(key);
                 }
             }
@@ -121,4 +145,5 @@ public class Day7Solver {
         steps.put(key, stepList);
         return steps;
     }
+
 }
