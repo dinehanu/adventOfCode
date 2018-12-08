@@ -18,6 +18,11 @@ public class Day8Solver {
         return new Tree(input).getSummedMetadata();
     }
 
+    public long solveSecondTask(){
+        List<Integer> input = fileReader.getFileContent("input");
+        return new Tree(input).getNodeValue();
+    }
+
     public Tree getTree(List<Integer> input){
         return  new Tree(input);
     }
@@ -31,6 +36,10 @@ public class Day8Solver {
 
         public int getSummedMetadata(){
             return root.getSummedMetadata();
+        }
+
+        public int getNodeValue(){
+            return root.getNodeValue();
         }
 
         public class Node {
@@ -59,6 +68,19 @@ public class Day8Solver {
             public int getSummedMetadata(){
                 return metadata.stream().mapToInt(Integer::intValue).sum() +
                         children.stream().mapToInt(Node::getSummedMetadata).sum();
+            }
+
+            public int getNodeValue(){
+                int ret = 0;
+                if(children.size() == 0){
+                    return metadata.stream().mapToInt(Integer::intValue).sum();
+                } else {
+                    for (Integer childIndex : metadata) {
+                        if(childIndex <= children.size())
+                        ret += children.get(childIndex-1).getNodeValue();
+                    }
+                }
+                return ret;
             }
         }
     }

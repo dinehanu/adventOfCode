@@ -10,6 +10,6 @@ public class Application {
 
         System.out.println("Lösningen på uppgift 1 är: " + solver.solveFirstTask());
 
-        System.out.println("Lösningen på uppgift 2 är: " + solver.solveFirstTask());
+        System.out.println("Lösningen på uppgift 2 är: " + solver.solveSecondTask());
     }
 }
