@@ -42,33 +42,26 @@ public class Day7Solver {
         return IntStream.range(0,numberOfWorkers).mapToObj(value -> new Worker()).collect(Collectors.toList());
     }
 
-
     private int calculateTimeForSteps(List<Worker> workers, Map<String, List<String>> steps, int timeForTask) {
-        int timeSpent = 0;
         int nrStepsTaken = 0;
         Map<String, List<String>> originalSteps = new HashMap<String, List<String>>(steps);
         int mapSize = steps.keySet().size();
 
-        while(mapSize != nrStepsTaken){
-            final int currentTimeSpent = timeSpent;
-            List<String> tasksBeingWorkedOn = workers.stream().filter(worker -> worker.time > currentTimeSpent).map(worker -> worker.currentTask).collect(Collectors.toList());
-            List<String> lockedTasks = new ArrayList<>();
-            for (String task: tasksBeingWorkedOn) {
-                lockedTasks.addAll(originalSteps.get(task));
-            }
-            List<String> availableSteps = getAvailableTests(steps, lockedTasks);
+        for (int seconds = 0; seconds <1500 ; seconds++) {
+            final int currentTimeSpent = seconds;
 
-            if(availableSteps.size() == 0){
-                List<Worker> test = workers.stream().filter(worker -> worker.currentTask == tasksBeingWorkedOn.get(0)).collect(Collectors.toList());
-                timeSpent = workers.stream().filter(worker -> worker.currentTask == tasksBeingWorkedOn.get(0)).collect(Collectors.toList()).get(0).time;
-                continue;
-            }
+            for (int workerIndex = 0; workerIndex < workers.size(); workerIndex++) {
+                List<String> tasksBeingWorkedOn = workers.stream().filter(worker -> worker.time > currentTimeSpent).map(worker -> worker.currentTask).collect(Collectors.toList());
+                List<String> lockedTasks = new ArrayList<>();
+                for (String task: tasksBeingWorkedOn) {
+                    lockedTasks.addAll(originalSteps.get(task));
+                }
+                List<String> availableSteps = getAvailableTests(steps, lockedTasks);
 
-            for (String step: availableSteps) {
-                for (int workerIndex = 0; workerIndex < workers.size(); workerIndex++) {
+                for (String step: availableSteps) {
                     Worker worker = workers.get(workerIndex);
-                    if(worker.time <= timeSpent){
-                        worker.time = timeSpent + getTimeForStep(step, timeForTask);
+                    if(worker.time <= seconds){
+                        worker.time = seconds + getTimeForStep(step, timeForTask);
                         worker.currentTask = step;
                         workers.set(workerIndex, worker);
                         nrStepsTaken++;
@@ -77,10 +70,11 @@ public class Day7Solver {
                     }
                 }
             }
-            timeSpent = workers.get(0).time;
-            workers.sort((Worker o1, Worker o2)->o1.time-o2.time);
+            if(nrStepsTaken == mapSize){
+                return workers.stream().max(comparing(Worker::getTime)).get().getTime();
+            }
         }
-        return timeSpent;
+        return 0;
     }
 
     private int getTimeForStep(String step, int timeForTask){
