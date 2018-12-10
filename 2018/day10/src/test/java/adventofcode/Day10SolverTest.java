@@ -16,6 +16,11 @@ public class Day10SolverTest {
     }
 
     @Test
+    void solveFirstTask() {
+        solver.solveFirstTask(0, 4);
+    }
+
+    @Test
     void solveSecondTask() {
         assertEquals(10000, solver.solveSecondTask());
     }

@@ -14,21 +14,32 @@ public class Day10Solver {
         this.fileReader = new FileReader();
     }
 
-    public void solveFirstTask(){
+    public void solveFirstTask(int start, int end){
         List<String> lines = fileReader.getFileContentAsArray("input");
         int[][] values = getValues(lines);
 
-        for (int i = 0; i < 15000; i++) {
-            System.out.println("index is: " + i);
-            String[][] currentPositions = IntStream.range(0, 300)
-                    .mapToObj(j -> IntStream.range(0, 300).mapToObj(k -> " ").toArray(String[]::new))
+        IntStream stream = Arrays.stream(values).flatMapToInt(Arrays::stream);
+
+        for (int i = start; i < end; i++) {
+            int counter = 0;
+            String[][] currentPositions = IntStream.range(0, 200)
+                    .mapToObj(j -> IntStream.range(0, 200).mapToObj(k -> " ").toArray(String[]::new))
                     .toArray(String[][]::new);
             for (int[] positions: values) {
-                int y = Math.abs(positions[0]+positions[2]*i)%100;
-                int x = Math.abs(positions[1]+positions[3]*i)%100;
-                currentPositions[x][y] = "#";
+                int y = (positions[0]+(positions[2]*i));
+                int x = (positions[1]+(positions[3]*i));
+                if(x > 0 && y > 0){
+                    if(x<currentPositions.length && y <currentPositions[x].length){
+                        currentPositions[x][y] = "#";
+                        counter++;
+                    }
+                }
+
             }
-            printMatrix(currentPositions);
+            if(counter == values.length){
+                System.out.println("index is: " + i);
+                printMatrix(currentPositions);
+            }
         }
     }
 
@@ -46,9 +57,9 @@ public class Day10Solver {
     }
 
     private void printMatrix(String[][] matrix){
-        for (int x = 0; x < 100; x++) {
+        for (int x = 0; x < matrix.length; x++) {
             String line = "";
-            for (int y = 0; y < 100; y++) {
+            for (int y = 0; y < matrix[x].length; y++) {
                 line += matrix[x][y];
             }
             System.out.println(line);

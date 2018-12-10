@@ -8,8 +8,8 @@ public class Application {
 
         Day10Solver solver = new Day10Solver();
 
-        solver.solveFirstTask();
+        solver.solveFirstTask(10600, 10610);
 
-        System.out.println("Lösningen på uppgift 2 är: " + solver.solveSecondTask());
+        //System.out.println("Lösningen på uppgift 2 är: " + solver.solveSecondTask());
     }
 }
