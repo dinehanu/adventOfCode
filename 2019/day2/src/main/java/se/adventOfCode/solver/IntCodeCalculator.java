@@ -14,8 +14,16 @@ public class IntCodeCalculator {
         return this.calculateFirstState("input");
     }
 
-    public long calculateSecondState(){
-        return this.calculateFirstState("input");
+    public int[] calculateSecondState(){
+        return this.calculateDesiredInputs("input", 19690720);
+    }
+
+    public int[] calculateDesiredInputs(String filePath, int wantedOutput){
+        int[] code = fileReader.getFileContentAsArray(filePath);
+        code[1] = 12;
+        code[2] = 2;
+        int[] test = calculateInputs(code, wantedOutput);
+        return calculateInputs(code, wantedOutput);
     }
 
     public long calculateFirstState(String filePath){
@@ -24,6 +32,30 @@ public class IntCodeCalculator {
             code[2] = 2;
             calculateLastState(code);
             return code[0];
+    }
+
+    public int[] calculateInputs(int[] code, int wantedOutput) {
+        int solution = 0;
+        int firstInput = 0;
+        int secondInput = 0;
+        for (int i = 0; i < code.length ; i = i+4) {
+
+            int firstValueIndex = code[i+1];
+            int secondValueIndex = code[i+2];
+            firstInput = code[firstValueIndex];
+            secondInput = code[secondValueIndex];
+
+            switch (code[i]){
+                case 1: solution = (100 * firstInput) + secondInput; break;
+                case 2:  solution = 100 * firstInput * secondInput; break;
+                default: return new int[]{};
+            }
+
+            if(solution == wantedOutput){
+                break;
+            }
+        }
+        return new int[]{firstInput, secondInput};
     }
 
     public int calculateLastState(int[] code) {

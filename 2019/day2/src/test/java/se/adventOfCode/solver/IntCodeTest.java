@@ -1,5 +1,6 @@
 package se.adventOfCode.solver;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,5 +32,11 @@ public class IntCodeTest {
         assertEquals(9801, calculator.calculateLastState(thirdArray));
         int[] fourthArray = fileReader.getFileContentAsArray("testInput4");
         assertEquals(30, calculator.calculateLastState(fourthArray));
+    }
+
+    @Test
+    public void calculateInputs() {
+
+        Assert.assertArrayEquals(new int[]{12, 2}, calculator.calculateDesiredInputs("testInput5", 1202));
     }
 }

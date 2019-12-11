@@ -13,10 +13,12 @@ public class TestController {
 
     @RequestMapping("/")
     public String index() {
+
+        int[] second = calculator.calculateSecondState();
         return "The resulting rocket fuel requirement is: " + calculator.calculateFirstState()
                 + "</br>"
                 + "</br>"
-                + "The resulting rocket fuel requirement with additional fuel is: " + calculator.calculateSecondState();
+                + "The resulting rocket fuel requirement with additional fuel is: [" + second[0] + ", " + second[1] + "]";
     }
 
 }
