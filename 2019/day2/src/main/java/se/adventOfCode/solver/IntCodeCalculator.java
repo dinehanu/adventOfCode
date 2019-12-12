@@ -14,16 +14,25 @@ public class IntCodeCalculator {
         return this.calculateFirstState("input");
     }
 
-    public int[] calculateSecondState(){
+    public int calculateSecondState(){
         return this.calculateDesiredInputs("input", 19690720);
     }
 
-    public int[] calculateDesiredInputs(String filePath, int wantedOutput){
+    public int calculateDesiredInputs(String filePath, int wantedOutput){
+        int[] inputs;
         int[] code = fileReader.getFileContentAsArray(filePath);
-        code[1] = 12;
-        code[2] = 2;
-        int[] test = calculateInputs(code, wantedOutput);
-        return calculateInputs(code, wantedOutput);
+        for (int i = 1; i <= 99; i++) {
+            for (int j = 1; j <= 99; j++) {
+                int[] codeCopy = code.clone();
+                codeCopy[1] = i;
+                codeCopy[2] = j;
+                inputs = calculateInputs(codeCopy, wantedOutput);
+                if (null != inputs) {
+                    return 100 * inputs[0] + inputs[1];
+                }
+            }
+        }
+        return 0;
     }
 
     public long calculateFirstState(String filePath){
@@ -35,27 +44,18 @@ public class IntCodeCalculator {
     }
 
     public int[] calculateInputs(int[] code, int wantedOutput) {
-        int solution = 0;
-        int firstInput = 0;
-        int secondInput = 0;
-        for (int i = 0; i < code.length ; i = i+4) {
-
-            int firstValueIndex = code[i+1];
-            int secondValueIndex = code[i+2];
-            firstInput = code[firstValueIndex];
-            secondInput = code[secondValueIndex];
-
-            switch (code[i]){
-                case 1: solution = (100 * firstInput) + secondInput; break;
-                case 2:  solution = 100 * firstInput * secondInput; break;
-                default: return new int[]{};
+            int solution = 0;
+            for (int i = 0; i < code.length ; i = i+4) {
+                switch (code[i]){
+                    case 1: solution = addition(code, i); break;
+                    case 2:  solution = multiplication(code, i); break;
+                    case 99: return solution == wantedOutput ? new int[]{code[1], code[2]} : null;
+                    default: return null;
+                }
+                int newIndex = code[i+3];
+                code[newIndex] = solution;
             }
-
-            if(solution == wantedOutput){
-                break;
-            }
-        }
-        return new int[]{firstInput, secondInput};
+            return null;
     }
 
     public int calculateLastState(int[] code) {

@@ -34,9 +34,4 @@ public class IntCodeTest {
         assertEquals(30, calculator.calculateLastState(fourthArray));
     }
 
-    @Test
-    public void calculateInputs() {
-
-        Assert.assertArrayEquals(new int[]{12, 2}, calculator.calculateDesiredInputs("testInput5", 1202));
-    }
 }

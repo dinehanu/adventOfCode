@@ -3,21 +3,21 @@ package se.adventOfCode.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
-import se.adventOfCode.solver.IntCodeCalculator;
+import se.adventOfCode.solver.CrossedWireSolver;
 
 @RestController
 public class TestController {
 
     @Autowired
-    IntCodeCalculator calculator;
+    CrossedWireSolver calculator;
 
     @RequestMapping("/")
     public String index() {
 
-        return "The resulting rocket fuel requirement is: " + calculator.calculateFirstState()
+        return "The closest crossing is at the distance: " + calculator.solveCrossedWires()
                 + "</br>"
                 + "</br>"
-                + "The resulting rocket fuel requirement with additional fuel is: " + calculator.calculateSecondState();
+                + "The resulting rocket fuel requirement with additional fuel is: " + calculator.solveCrossedWires();
     }
 
 }
